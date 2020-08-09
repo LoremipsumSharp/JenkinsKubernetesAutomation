@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\dotnet-kube-client\src\KubeClient.Extensions.KubeConfig\KubeClient.Extensions.KubeConfig.csproj" />
+    <ProjectReference Include="..\dotnet-kube-client\src\KubeClient\KubeClient.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Consul" Version="0.7.2.6" />
+    <PackageReference Include="MediatR" Version="7.0.0" />
+  </ItemGroup>
+
+</Project>

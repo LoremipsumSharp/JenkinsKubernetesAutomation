@@ -1,0 +1,9 @@
+name: followme-srv-kube-consul-sync
+home: https://github.com/morining/FM.Kube.Consul.Sync.git
+version: 1.0.0
+description: 
+sources:
+  - https://github.com/morining/FM.Kube.Consul.Sync.git
+maintainers:
+  - name: loremipsum
+    email: 289989941@qq.com

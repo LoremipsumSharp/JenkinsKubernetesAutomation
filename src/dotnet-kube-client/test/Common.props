@@ -1,0 +1,8 @@
+<Project>
+  <!-- Common settings for projects -->
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <Import Project="..\DependencyVersions.props" />
+</Project>

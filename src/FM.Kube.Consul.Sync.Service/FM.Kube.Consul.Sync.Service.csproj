@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\dotnet-kube-client\src\KubeClient.Extensions.Configuration\KubeClient.Extensions.Configuration.csproj" />
+    <ProjectReference Include="..\dotnet-kube-client\src\KubeClient.Extensions.DependencyInjection\KubeClient.Extensions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\dotnet-kube-client\src\KubeClient.Extensions.KubeConfig\KubeClient.Extensions.KubeConfig.csproj" />
+    <ProjectReference Include="..\dotnet-kube-client\src\KubeClient\KubeClient.csproj" />
+    <ProjectReference Include="..\FM.Kube.Consul.Sync.Model\FM.Kube.Consul.Sync.Model.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Consul" Version="0.7.2.6" />
+    <PackageReference Include="MediatR" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Quartz" Version="3.0.7" />
+  </ItemGroup>
+
+</Project>

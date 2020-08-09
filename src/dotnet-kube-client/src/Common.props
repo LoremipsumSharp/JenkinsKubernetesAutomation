@@ -1,0 +1,20 @@
+<Project>
+  <!-- Common settings for projects -->
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <!-- Common package properties -->
+  <PropertyGroup>
+      <PackageProjectUrl>https://github.com/tintoy/dotnet-kube-client/</PackageProjectUrl>
+      <PackageLicenseUrl>https://raw.githubusercontent.com/tintoy/dotnet-kube-client/master/LICENSE</PackageLicenseUrl>
+
+      <PackageTags>Kubernetes;Client;kubectl</PackageTags>
+
+      <RepositoryType>git</RepositoryType>
+      <RepositoryUrl>https://github.com/tintoy/dotnet-kube-client</RepositoryUrl>
+  </PropertyGroup>
+
+  <Import Project="..\DependencyVersions.props" />
+</Project>

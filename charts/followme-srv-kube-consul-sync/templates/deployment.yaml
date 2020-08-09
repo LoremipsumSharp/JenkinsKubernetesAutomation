@@ -1,0 +1,27 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: "{{ .Values.application.name }}"
+spec:
+  replicas: {{ .Values.deployment.instances }}
+  template:
+    metadata:
+      labels:
+        name: "{{ .Values.application.name }}"
+    spec:
+      containers:
+        - name: "{{ .Values.application.name }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.imageTag }}"
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Development"
+          ports:
+            - containerPort: {{.Values.deployment.port}}
+          resources:
+            limits:
+              cpu: {{ .Values.resources.limits.cpu }}
+              memory: {{ .Values.resources.limits.memory }}
+            requests:
+              cpu: {{ .Values.resources.requests.cpu }}
+              memory: {{ .Values.resources.requests.memory }}
+      restartPolicy: Always

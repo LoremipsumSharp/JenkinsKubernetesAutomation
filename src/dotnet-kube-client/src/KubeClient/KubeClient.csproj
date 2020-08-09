@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+
+    <Description>A Kubernetes API client for .NET</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+      <PackageReference Include="HTTPlease.Core" Version="$(PackageVersion_HTTPlease)" />
+      <PackageReference Include="HTTPlease.Diagnostics" Version="$(PackageVersion_HTTPlease)" />
+      <PackageReference Include="HTTPlease.Formatters.Json" Version="$(PackageVersion_HTTPlease)" />
+      <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="1.1.2" />
+      <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+      <PackageReference Include="System.Diagnostics.Process" Version="4.3.0" />
+      <PackageReference Include="System.Reactive" Version="3.1.1" />
+      <PackageReference Include="System.ValueTuple" Version="4.4.0" />
+      <PackageReference Include="YamlDotNet" Version="5.0.0" />
+  </ItemGroup>
+
+  <Import Project="..\Common.props" />
+</Project>

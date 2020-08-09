@@ -1,0 +1,19 @@
+application:
+  name: cs-kube-consul-sync-srv
+image:
+   repository: dockerhub.followme-internal.com/deploy/cs-kube-consul-sync-srv
+   imageTag: "latest"
+   pullPolicy: "IfNotPresent"
+   env:
+      - name: ASPNETCORE_ENVIRONMENT
+        value: "Development"
+deployment:
+  port: 80
+  instances : 1
+resources:
+  requests:
+    memory: 500Mi
+    cpu: 200m
+  limits:
+    memory: 500Mi
+    cpu: 200m

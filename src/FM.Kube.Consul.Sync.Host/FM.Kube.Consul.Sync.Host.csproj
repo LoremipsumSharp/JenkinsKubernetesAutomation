@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Consul" Version="0.7.2.6" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.11"  />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\dotnet-kube-client\src\KubeClient.Extensions.Configuration\KubeClient.Extensions.Configuration.csproj" />
+    <ProjectReference Include="..\dotnet-kube-client\src\KubeClient.Extensions.KubeConfig\KubeClient.Extensions.KubeConfig.csproj" />
+    <ProjectReference Include="..\dotnet-kube-client\src\KubeClient\KubeClient.csproj" />
+    <ProjectReference Include="..\FM.Kube.Consul.Sync.Common\FM.Kube.Consul.Sync.Common.csproj" />
+    <ProjectReference Include="..\FM.Kube.Consul.Sync.Model\FM.Kube.Consul.Sync.Model.csproj" />
+    <ProjectReference Include="..\FM.Kube.Consul.Sync.Service\FM.Kube.Consul.Sync.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="kube.config.Development.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
